@@ -1,0 +1,46 @@
+%heading {
+    font-family: var(--font-roboto);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.h1 {
+    @extend %heading;
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.h2 {
+    @extend %heading;
+    font-size: 4.2rem;
+    line-height: 1.24;
+}
+
+.h3 {
+    @extend %heading;
+    font-family: var(--font-manrope);
+    font-size: 2.4rem;
+    line-height: 1.42;
+}
+
+.h4 {
+    @extend %heading;
+    font-family: var(--font-manrope);
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.p-1 {
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.p-2 {
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.p-3 {
+    font-size: 1.4rem;
+    line-height: 1.72;
+}

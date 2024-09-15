@@ -1,0 +1,131 @@
+.header {
+    padding-top: 28px;
+    background-color: var(--color-1);
+}
+
+.icon {
+    filter: var(--color-icon-white);
+}
+
+.nav {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+    }
+
+    &__form {
+        width: 800px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__input {
+        flex: 1;
+        padding: 10px 20px 10px 10px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-right-color: transparent;
+
+        &::placeholder {
+            color: #fff;
+        }
+    }
+
+    &__btn-search {
+        margin-left: -2px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 46px;
+        padding: 13px;
+        background-color: var(--color-3);
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &__num {
+        color: #fff;
+    }
+
+    &__list {
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        position: relative;
+        padding: 30px;
+        color: #fff;
+        cursor: pointer;
+        &:not(.nav__link-no-dropdown):before {
+            content: url("../../assets/icon/dropdonw.svg");
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            color: var(--color-3);
+        }
+    }
+
+    &__link-no-dropdown {
+        padding-right: 15px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__dropdown {
+        position: absolute;
+        display: none;
+        padding-top: 28px;
+        top: 30px;
+        left: 50%;
+        translate: -50%;
+        z-index: 9999;
+        &--list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--link {
+            padding: 8px 24px;
+            border-top: 1px solid var(--color-2);
+            display: inline-block;
+            width: 210px;
+            height: 50px;
+            color: #fff;
+            background-color: var(--color-1);
+            &:hover {
+                color: var(--color-3);
+            }
+        }
+    }
+
+    &__item:hover > &__dropdown {
+        display: block;
+    }
+}

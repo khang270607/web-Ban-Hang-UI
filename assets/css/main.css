@@ -1279,11 +1279,11 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-manrope);
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
-  color: #2d3134;
+  color: var(--text-color);
 }
 
 a {
@@ -1335,12 +1335,13 @@ button {
 }
 a:hover,
 button:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 :root {
-  --font-popins: "Poppins", sans-serif;
-  --color-icon: #ff7b29;
+  --font-manrope: "Manrope", sans-serif;
+  --font-roboto: "Roboto Slab", serif;
+  --color-common: #f1deb4;
   --srcollbar-bg: rgba(0, 0, 0, 0);
   --menu-scrollbar: rgba(22, 24, 35, 0.2);
 }
@@ -1375,22 +1376,221 @@ button:hover {
   background-color: var(--srcollbar-bg);
 }
 
-.btn {
+.header {
+  padding-top: 28px;
+  background-color: var(--color-1);
+}
+
+.icon {
+  filter: var(--color-icon-white);
+}
+
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.nav__form {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__input {
+  flex: 1;
+  padding: 10px 20px 10px 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-right-color: transparent;
+}
+.nav__input::placeholder {
+  color: #fff;
+}
+.nav__btn-search {
+  margin-left: -2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 46px;
+  padding: 13px;
+  background-color: var(--color-3);
+}
+.nav__icon {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 48px;
-  border-radius: 8px;
-  padding: 16px 26px 16px 28px;
-  gap: 10px;
-  background: var(--color-icon);
-  user-select: none;
-  font-family: var(--font-popins);
-  font-size: 1.4rem;
-  font-weight: 500;
+  gap: 4px;
+  cursor: pointer;
+}
+.nav__icon:hover {
+  opacity: 0.9;
+}
+.nav__num {
   color: #fff;
-  white-space: nowrap;
-  letter-spacing: -0.14px;
+}
+.nav__list {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__link {
+  position: relative;
+  padding: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.nav__link:not(.nav__link-no-dropdown):before {
+  content: url("../../assets/icon/dropdonw.svg");
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.nav__link:hover {
+  color: var(--color-3);
+}
+.nav__link-no-dropdown {
+  padding-right: 15px;
+}
+.nav__item {
+  position: relative;
+}
+.nav__dropdown {
+  position: absolute;
+  display: none;
+  padding-top: 28px;
+  top: 30px;
+  left: 50%;
+  translate: -50%;
+  z-index: 9999;
+}
+.nav__dropdown--list {
+  display: flex;
+  flex-direction: column;
+}
+.nav__dropdown--link {
+  padding: 8px 24px;
+  border-top: 1px solid var(--color-2);
+  display: inline-block;
+  width: 210px;
+  height: 50px;
+  color: #fff;
+  background-color: var(--color-1);
+}
+.nav__dropdown--link:hover {
+  color: var(--color-3);
+}
+.nav__item:hover > .nav__dropdown {
+  display: block;
+}
+
+.btn, .btn-small, .btn-lagre, .b-1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.btn, .btn-small, .btn-lagre {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 35px;
+  border: 1px solid var(--color-1);
+  color: var(--color-1);
+  height: 60px;
+}
+
+.btn-lagre {
+  padding: 15px 142px;
+  width: 370px;
+}
+
+.btn-small {
+  width: 158px;
+}
+
+.btn-deep, .btn:hover, .btn-lagre:hover, .btn-small:hover {
+  color: #fff;
+  background: var(--color-1);
+}
+
+.btn-deep-2 {
+  color: #fff;
+  background: #00383c;
+}
+
+.logo__name {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.h4, .h3, .h2, .h1 {
+  font-family: var(--font-roboto);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 5.8rem;
+  line-height: 1.17;
+}
+
+.h2 {
+  font-size: 4.2rem;
+  line-height: 1.24;
+}
+
+.h3 {
+  font-family: var(--font-manrope);
+  font-size: 2.4rem;
+  line-height: 1.42;
+}
+
+.h4 {
+  font-family: var(--font-manrope);
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.p-1 {
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.p-2 {
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.p-3 {
+  font-size: 1.4rem;
+  line-height: 1.72;
+}
+
+html {
+  --text-color: #131717;
+  --color-1: #005d63;
+  --color-2: #1e787d;
+  --color-3: #ffd44d;
+  --color-4: #edd08f;
+  --color-5: #f1deb4;
+  --color-6: #f86624;
+  --color-7: #404b4b;
+  --color-8: #c4d1d0;
+  --color-9: #566363;
+  --color-10: #889595;
+  --color-11: #a6b6b6;
+  --color-icon-white: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(0%)
+      hue-rotate(113deg) brightness(107%) contrast(107%);
 }
 
 /*# sourceMappingURL=main.css.map */

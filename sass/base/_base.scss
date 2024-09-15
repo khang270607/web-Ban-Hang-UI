@@ -9,12 +9,11 @@ html {
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-manrope);
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
-    color: #2d3134;
-    // height: 99999999px;
+    color: var(--text-color);
 }
 a {
     color: inherit;
@@ -63,13 +62,14 @@ button {
     transition: 0.3s;
 
     &:hover {
-        opacity: 0.8;
+        opacity: 0.9;
     }
 }
 
 :root {
-    --font-popins: "Poppins", sans-serif;
-    --color-icon: #ff7b29;
+    --font-manrope: "Manrope", sans-serif;
+    --font-roboto: "Roboto Slab", serif;
+    --color-common: #f1deb4;
     --srcollbar-bg: rgba(0, 0, 0, 0);
     --menu-scrollbar: rgba(22, 24, 35, 0.2);
 }
